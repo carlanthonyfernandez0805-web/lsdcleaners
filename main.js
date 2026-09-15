@@ -25,6 +25,24 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // Get a Quote page: Cleaning / Snow Removal tab toggle
+  var quoteTabs = document.querySelectorAll('.quote-tab');
+  if (quoteTabs.length) {
+    quoteTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        quoteTabs.forEach(function (t) {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        document.querySelectorAll('.quote-panel').forEach(function (panel) {
+          panel.classList.toggle('active', panel.id === tab.getAttribute('data-target'));
+        });
+      });
+    });
+  }
   var popup = document.getElementById('first-time-popup');
   if (popup) {
     if (!sessionStorage.getItem('lsd_offer_shown')) {

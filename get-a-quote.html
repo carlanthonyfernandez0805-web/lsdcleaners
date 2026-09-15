@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Free Quote | LSD Cleaners — Toronto & GTA</title>
+<meta name="description" content="Get a free quote for house cleaning, commercial cleaning, or seasonal snow removal in Toronto and the GTA. Takes about a minute.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .quote-tabs { display: inline-flex; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 6px; gap: 6px; margin-bottom: 28px; }
+  .quote-tab { border: none; background: transparent; padding: 12px 26px; border-radius: var(--radius-pill); font-family: var(--font); font-weight: 600; font-size: 0.95rem; color: var(--ink-soft); cursor: pointer; transition: all 0.15s ease; }
+  .quote-tab.active.cleaning { background: var(--amber); color: #fff; }
+  .quote-tab.active.snow { background: var(--ice); color: #fff; }
+  .quote-panel { display: none; }
+  .quote-panel.active { display: block; }
+  .quote-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+  .quote-fields-list { columns: 2; gap: 24px; margin: 18px 0 0; padding: 0; list-style: none; }
+  .quote-fields-list li { font-size: 0.88rem; color: var(--ink-soft); padding: 5px 0; break-inside: avoid; }
+  .quote-fields-list li::before { content: '\2713'; color: var(--ice); font-weight: 700; margin-right: 8px; }
+  #cleaning-quote .quote-fields-list li::before { color: var(--amber-dark); }
+  @media (max-width: 900px) { .quote-layout { grid-template-columns: 1fr; } .quote-fields-list { columns: 1; } }
+</style>
+</head>
+<body>
+
+<div class="announce">Seasonal snow removal spots are filling up — book before October 15 and save 10%. <a href="pricing.html">See the offer</a></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">LSD <span>Cleaners</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="cleaning-services.html">Cleaning Services</a>
+      <a href="snow-removal.html">Snow Removal</a>
+      <a href="pricing.html">Pricing &amp; Packages</a>
+      <a href="about.html">About Us</a>
+      <div class="nav-dropdown" id="nav-more">
+        <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">More <span class="caret">&#9662;</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="service-areas.html">Service Areas</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-ctas">
+      <a href="get-a-quote.html" class="btn btn-outline btn-sm">Get a free quote</a>
+      <a href="book-now.html" class="btn btn-primary btn-sm">Book a service</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="section" style="padding-bottom:24px; text-align:center;">
+  <div class="wrap">
+    <h1 style="font-size:clamp(1.9rem,4vw,2.6rem);">Tell us what you need. We'll help with the rest.</h1>
+    <p style="margin:0 auto; text-align:center;">Choose cleaning or snow removal, answer a few simple questions, and we'll help you find the right service.</p>
+  </div>
+</section>
+
+<!-- ============ QUOTE TABS + FORMS ============ -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="text-align:center;">
+    <div class="quote-tabs" role="tablist">
+      <button class="quote-tab active cleaning" data-target="cleaning-quote" role="tab" aria-selected="true">Cleaning</button>
+      <button class="quote-tab snow" data-target="snow-quote" role="tab" aria-selected="false">Snow Removal</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- ===== CLEANING QUOTE PANEL ===== -->
+    <div class="quote-panel active" id="cleaning-quote">
+      <div class="quote-layout">
+        <div>
+          <span class="tag cleaning">Cleaning quote</span>
+          <h2>Get my cleaning quote</h2>
+          <p>Tell us about your property and we'll get back to you with pricing, usually within about 2 hours during normal business hours.</p>
+          <p style="font-weight:600; color:var(--ink); margin-bottom:4px;">This form should collect:</p>
+          <ul class="quote-fields-list">
+            <li>First Name</li>
+            <li>Last Name</li>
+            <li>Phone</li>
+            <li>Email</li>
+            <li>Street Address</li>
+            <li>Postal Code</li>
+            <li>Property Type</li>
+            <li>Cleaning Type</li>
+            <li>Property Size</li>
+            <li># of Bedrooms</li>
+            <li># of Bathrooms</li>
+            <li>Approx. Square Footage</li>
+            <li>Preferred Service Date</li>
+            <li>One-Time or Recurring</li>
+            <li>Additional Notes</li>
+            <li>Optional Photo Upload</li>
+            <li>Marketing Consent (checkbox)</li>
+          </ul>
+        </div>
+        <div class="quote-card">
+          <h3>Cleaning quote form</h3>
+          <div class="sub">Connects to GHL — see setup notes below</div>
+          <div class="ghl-slot">
+            <strong>GHL form embed goes here</strong>
+            Build a GHL form named "Cleaning Quote" with the fields listed on the left, in that order. Sites &rarr; Forms &rarr; New Form &rarr; add fields &rarr; Add to Website &rarr; copy embed code &rarr; paste it in place of this div.
+            <br><br>
+            On submit: tag the contact <strong>Cleaning Lead</strong> + <strong>Website Lead</strong>, plus the specific service tag matching their Cleaning Type selection (House Cleaning / Commercial Cleaning / Post-Construction Cleaning). Move them to <strong>New Lead</strong> in the pipeline.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SNOW QUOTE PANEL ===== -->
+    <div class="quote-panel" id="snow-quote">
+      <div class="quote-layout">
+        <div>
+          <span class="tag snow">Snow removal quote</span>
+          <h2>Get my snow removal quote</h2>
+          <p>Tell us about your driveway and property, and we'll help you find the right seasonal or one-time plan.</p>
+          <p style="font-weight:600; color:var(--ink); margin-bottom:4px;">This form should collect:</p>
+          <ul class="quote-fields-list">
+            <li>First Name</li>
+            <li>Last Name</li>
+            <li>Phone</li>
+            <li>Email</li>
+            <li>Street Address</li>
+            <li>Postal Code</li>
+            <li>Residential or Commercial</li>
+            <li>Driveway Size</li>
+            <li>Driveway Surface</li>
+            <li>Walkway Clearing Needed?</li>
+            <li>Windrow Clearing Needed?</li>
+            <li>De-Icing Needed?</li>
+            <li>Seasonal or One-Time?</li>
+            <li>Is the Driveway Steep?</li>
+            <li>Unusual Obstacles / Retaining Walls</li>
+            <li>Optional Photo Upload</li>
+          </ul>
+        </div>
+        <div class="quote-card">
+          <h3>Snow removal quote form</h3>
+          <div class="sub">Connects to GHL — see setup notes below</div>
+          <div class="ghl-slot">
+            <strong>GHL form embed goes here</strong>
+            Build a GHL form named "Snow Removal Quote" with the fields listed on the left, in that order. Sites &rarr; Forms &rarr; New Form &rarr; add fields &rarr; Add to Website &rarr; copy embed code &rarr; paste it in place of this div.
+            <br><br>
+            On submit: tag the contact <strong>Snow Removal Lead</strong> + <strong>Website Lead</strong>, plus <strong>Residential Lead</strong> or <strong>Commercial Lead</strong> and <strong>Snow Seasonal Lead</strong> if applicable, based on their answers. Move them to <strong>New Lead</strong> in the pipeline. If "steep driveway" or "unusual obstacles" is answered yes, flag for manual review per the escalation rules — don't auto-confirm pricing on those.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING NOTE ============ -->
+<section class="section section-alt" style="text-align:center;">
+  <div class="wrap">
+    <h2>Prefer to book directly?</h2>
+    <p style="margin:0 auto 20px;">If you already know what you need, you can skip the quote and go straight to booking.</p>
+    <a href="book-now.html" class="btn btn-primary">Book a service</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-tagline">LSD Cleaners</div>
+      <p style="color:rgba(255,255,255,0.65); font-size:0.88rem;">Cleaning inside. Winter care outside. More time for you.</p>
+    </div>
+    <div>
+      <h3>Quick links</h3>
+      <a href="index.html">Home</a>
+      <a href="cleaning-services.html">Cleaning</a>
+      <a href="snow-removal.html">Snow removal</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+    </div>
+    <div>
+      <h3>More</h3>
+      <a href="service-areas.html">Service areas</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h3>Legal</h3>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms &amp; conditions</a>
+      <a href="cleaning-policy.html">Cleaning service policy</a>
+      <a href="snow-agreement.html">Snow removal agreement</a>
+      <a href="cancellation-policy.html">Cancellation policy</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; <span id="year"></span> LSD Cleaners. All rights reserved.</span>
+    <span>Facebook &middot; Instagram &middot; LinkedIn</span>
+  </div>
+</footer>
+
+<div class="popup-overlay" id="first-time-popup">
+  <div class="popup-card">
+    <button class="popup-close" aria-label="Close">&times;</button>
+    <div class="kicker" style="color:var(--urgency); font-size:0.9rem; font-weight:600; margin-bottom:6px;">First-time offer</div>
+    <h3>First time with LSD Cleaners?</h3>
+    <p style="font-size:0.9rem;">Enter your details and we'll send you our current new-customer offer.</p>
+    <div class="ghl-slot">
+      <strong>GHL form embed goes here</strong>
+      Same "First-Time Offer" GHL form used site-wide — paste its embed script in place of this div. Shows once per session after an 8-second delay.
+    </div>
+  </div>
+</div>
+
+<div class="chat-launcher-slot">Chat widget embed goes here</div>
+
+<script src="main.js"></script>
+</body>
+</html>
