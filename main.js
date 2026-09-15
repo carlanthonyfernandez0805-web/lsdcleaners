@@ -4,6 +4,27 @@ document.addEventListener('DOMContentLoaded', function () {
   if (toggle && nav) {
     toggle.addEventListener('click', function () { nav.classList.toggle('open'); });
   }
+  var dropdown = document.getElementById('nav-more');
+  if (dropdown) {
+    var dropdownBtn = dropdown.querySelector('.nav-dropdown-toggle');
+    dropdownBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = dropdown.classList.toggle('open');
+      dropdownBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        dropdown.classList.remove('open');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
   var popup = document.getElementById('first-time-popup');
   if (popup) {
     if (!sessionStorage.getItem('lsd_offer_shown')) {
