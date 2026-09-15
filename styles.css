@@ -47,7 +47,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); max-width: 58ch; }
 
 /* Header */
 header.site-header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--border); }
-.header-inner { display: flex; align-items: center; justify-content: flex-start; padding: 16px 32px; width: 100%; }
+.header-inner { display: flex; align-items: center; justify-content: flex-start; padding: 16px 24px; max-width: 1280px; margin: 0 auto; }
 .logo { font-weight: 800; font-size: 1.3rem; text-decoration: none; color: var(--ink); white-space: nowrap; flex-shrink: 0; }
 .logo span { color: var(--urgency); }
 nav.main-nav { display: flex; gap: 22px; flex-wrap: nowrap; margin-left: 40px; align-items: center; }
